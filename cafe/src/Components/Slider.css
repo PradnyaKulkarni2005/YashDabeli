@@ -1,0 +1,35 @@
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: 80vh;
+}
+@font-face {
+  font-family: 'Titlefont';
+  src: url('../assets/fonts/titlefont.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.title{
+  font-family: 'Titlefont';
+  font-size: 65px;
+  text-align: center;
+}
+.blurred-background {
+  
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.custom-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}

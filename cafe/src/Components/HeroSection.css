@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Titlefont';
+  src: url('../assets/fonts/titlefont.otf') format('truetype');
+  font-weight: bold;
+  font-size: 50px;
+}
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #fdf6f0; /* Café warm tone */
+  transition: all 1s ease;
+  padding: 0;
+}
+
+.hero-container.split {
+  justify-content: space-between;
+  padding: 0 5vw;
+}
+
+.hero-left {
+  width: 100%;
+  text-align: center;
+  transition: all 1s ease;
+}
+
+.hero-container.split .hero-left {
+  width: 50%;
+  text-align: left;
+}
+
+.main-title {
+  font-family: 'Titlefont', sans-serif;
+  font-size: 60px;
+  color: #2d1f0c;
+  animation: fadeInUp 1s ease;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #5b3920;
+  animation: fadeInUp 1.5s ease;
+}
+
+.hero-right {
+  width: 50%;
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideInRight 1s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
