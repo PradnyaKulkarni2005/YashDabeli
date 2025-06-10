@@ -1,6 +1,6 @@
 .contact-container {
   padding: 60px 20px;
-  background: linear-gradient(135deg, #fff5ec, #ffe7e7);
+  background: linear-gradient(135deg, #fad2fa, #ffe7e7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,6 +127,9 @@
 @media screen and (max-width: 768px) {
   .contact-title {
     font-size: 2rem;
+  }
+  .contact-container{
+    padding-top: 145px; 
   }
 
   .contact-message {

@@ -1,5 +1,5 @@
 .why-section {
-    background-color: #ffeedd;
+    background-color: #f5def3;
   /* background: linear-gradient(135deg, #fffaf5, #fdf0e3); */
   padding: 80px 20px;
   text-align: center;
@@ -103,5 +103,8 @@
 
   .why-icon {
     font-size: 40px;
+  }
+  .why-section{
+    padding-top: 240px; 
   }
 }

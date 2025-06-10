@@ -47,7 +47,7 @@ export default function Menu() {
       </div>
 
       <div className="offers-section">
-        <h3 className="offers-title">🔥 Today's Special Offers</h3>
+        <h3 className="offers-title">🔥 Our Special Offers</h3>
         <div className="offers-gallery">
           {specialOffers.map((offer, idx) => (
             <div

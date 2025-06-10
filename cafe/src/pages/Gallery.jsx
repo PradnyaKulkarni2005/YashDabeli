@@ -5,7 +5,7 @@ import './Gallery.css';
 export default function Gallery() {
   return (
     <div className="gallery-container">
-      <h2 className="gallery-heading">🎥 Experience the Flavor at Yash Dabeli</h2>
+      <h2 className="gallery-heading">Experience the Flavor at Yash Dabeli</h2>
       <p className="gallery-subtext">
         Relive the joy, taste the vibe — let our gallery take you inside the heart of our cafe.
       </p>
