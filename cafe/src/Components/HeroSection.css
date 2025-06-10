@@ -1,49 +1,58 @@
 @font-face {
-  font-family: 'Titlefont';
-  src: url('../assets/fonts/titlefont.otf') format('truetype');
-  font-weight: bold;
-  font-size: 50px;
+  font-family: 'maintitle';
+  src: url('../assets/fonts/maintitle.ttf') format('truetype');
+  font-size: 80px;
+ 
 }
-
 .hero-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden;
-  background-color: #ffeedd; /* Café warm tone */
+  /* background-color: #ffeedd; */
   transition: all 1s ease;
-  padding: 0;
+  padding: 20px;
+  text-align: center;
+  flex-direction: column; /* default: center */
 }
 
 .hero-container.split {
+  flex-direction: row; /* now becomes split */
   justify-content: space-between;
+  align-items: center;
   padding: 0 5vw;
+  text-align: left;
 }
 
 .hero-left {
   width: 100%;
-  text-align: center;
   transition: all 1s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-container.split .hero-left {
   width: 50%;
+  align-items: flex-start;
   text-align: left;
 }
 
 .main-title {
-  font-family: 'Titlefont', sans-serif;
-  font-size: 60px;
-  color: #2d1f0c;
+  font-family: 'maintitle', sans-serif;
+  font-size: 48px;
+  color: #471232;
   animation: fadeInUp 1s ease;
 }
 
 .subtitle {
   font-size: 20px;
   margin-top: 20px;
-  color: #5b3920;
+  color: #2f0d22;
   animation: fadeInUp 1.5s ease;
+  font-family: 'subtitle';
+  font-weight: bold;
 }
 
 .hero-right {
@@ -53,6 +62,12 @@
   animation: slideInRight 1s forwards;
 }
 
+.footer {
+  background-color: rgb(63, 24, 31);
+  padding: 30px 20px;
+}
+
+/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -70,6 +85,36 @@
     transform: translateX(0);
   }
 }
-.footer{
-  background-color: rgb(63, 24, 31);
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-container,
+  .hero-container.split {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .hero-left,
+  .hero-container.split .hero-left,
+  .hero-right {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .choose{
+    padding: 35px;
+  }
+  .main-title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .hero-right {
+    margin-top: 30px;
+  }
 }

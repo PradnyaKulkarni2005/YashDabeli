@@ -19,7 +19,7 @@ export default function Contact({ variant }) {
         <h2 className="contact-title animate-fade">
           {isHero ? "Your Smile Starts Here 💫" : "We’d ❤️ to Hear From You"}
         </h2>
-
+        
         <p className="contact-message animate-slide">
           {isHero
             ? "Have a craving? Let’s make your taste buds dance! At Yash Dabeli, every flavor tells a story. 💬"
@@ -29,7 +29,7 @@ export default function Contact({ variant }) {
         <div className="contact-info animate-fade-up">
           <div><FaMapMarkerAlt /> &nbsp;Raigad Colony, Near Bharat Bakery, Panchgaon, Kolhapur</div>
           <div><FaEnvelope /> &nbsp;yashmandar@gmail.com</div>
-          <div><FaPhone /> &nbsp;+91 98765 43210</div>
+          <div><FaPhone /> &nbsp;+91 9762316127</div>
         </div>
 
         <div className="social-icons animate-fade-up">

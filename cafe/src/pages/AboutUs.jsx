@@ -56,7 +56,7 @@ export default function AboutUs() {
           <div className="founder-card">
             <img src={founder2} alt="Shruti Pujari" />
             <h4>Shruti Pujari</h4>
-            <p>Manages the ambience and operations with love and precision.</p>
+            <p>Ensures a pleasant environment and efficient workflow.</p>
           </div>
         </div>
       </div>

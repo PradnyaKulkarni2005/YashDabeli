@@ -1,9 +1,21 @@
 .about-us-wrapper {
   font-family: "Segoe UI", sans-serif;
-  color: #3e2c1e;
-  background-color: #fff8f0;
+  /* color: #3e2c1e; */
+  /* background-color: #fff8f0; */
 }
 
+@font-face {
+  font-family: 'title';
+  src: url('../assets/fonts/title.ttf') format('truetype');
+  font-size: 80px;
+ 
+}
+@font-face {
+  font-family: 'subtitle';
+  src: url('../assets/fonts/titlefont.otf') format('truetype');
+  font-size: 40px;
+  font-weight: bold;
+}
 .about-hero {
   background: url('https://res.cloudinary.com/deu26betq/image/upload/v1749492374/pizza2_fynogs.jpg') center/cover no-repeat;
   height: 60vh;
@@ -22,15 +34,17 @@
 }
 
 .hero-title {
-  font-size: 3.2rem;
+  font-size: 3.5rem;
   margin-bottom: 10px;
   text-shadow: 2px 2px 10px #000;
+  font-family: 'title';
 }
 
 .hero-subtitle {
   font-size: 1.3rem;
   max-width: 600px;
   margin: 0 auto;
+  font-family: 'subtitle';
 }
 
 .about-section {
@@ -43,8 +57,9 @@
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #774936;
+  color: #4f2b1b;
   font-weight: bold;
+  font-family: 'subtitle';
 }
 
 .about-section p {
@@ -59,11 +74,11 @@
   justify-content: center;
   gap: 30px;
   padding: 50px 20px;
-  background-color: #fff1e6;
+  /* background-color: #fff1e6; */
 }
 
 .mv-box {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   border-left: 6px solid #5c2e34;
   border-radius: 10px;
   padding: 30px;
