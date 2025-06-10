@@ -3,6 +3,7 @@ import './HeroSection.css';
 import Slider from './Slider';
 import WhyChooseUs from '../pages/WhyChooseUs';
 import Contact from '../pages/Contact';
+import BlurText from './BlurText';
 
 export default function HeroSection() {
   const [showSlider, setShowSlider] = useState(false);
@@ -14,12 +15,31 @@ export default function HeroSection() {
     return () => clearTimeout(timer);
   }, []);
 
+  const handleAnimationComplete = () => {
+    console.log('Animation completed!');
+  };
+
   return (
     <>
       <div className={`hero-container ${showSlider ? 'split' : ''}`}>
         <div className={`hero-left ${showSlider ? 'animate-left' : ''}`}>
-          <h1 className="main-title">Welcome to Yash Dabeli & Fastfood</h1>
-          <p className="subtitle">Where Taste Meets Speed – And Every Bite Brings a Smile!</p>
+          <BlurText
+            text="Welcome to Yash Dabeli & Fastfood"
+            delay={100}
+            animateBy="words"
+            direction="top"
+            onAnimationComplete={handleAnimationComplete}
+            className="main-title"
+          />
+
+          <BlurText
+            text="Where Taste Meets Speed – And Every Bite Brings a Smile!"
+            delay={300}
+            animateBy="words"
+            direction="top"
+            onAnimationComplete={handleAnimationComplete}
+            className="subtitle"
+          />
         </div>
 
         {showSlider && (
@@ -28,13 +48,13 @@ export default function HeroSection() {
           </div>
         )}
       </div>
-
-     
+      <div className='choose'>
       <WhyChooseUs />
+      </div>
+
       <div className="footer">
         <Contact variant="hero" />
       </div>
-
     </>
   );
 }

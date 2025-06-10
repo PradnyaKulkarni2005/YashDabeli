@@ -1,5 +1,6 @@
 .why-section {
-  background: linear-gradient(135deg, #fffaf5, #fdf0e3);
+    background-color: #ffeedd;
+  /* background: linear-gradient(135deg, #fffaf5, #fdf0e3); */
   padding: 80px 20px;
   text-align: center;
   transition: all 0.3s ease-in-out;
@@ -9,7 +10,7 @@
   font-size: 3rem;
   margin-bottom: 50px;
   color: #b33a3a;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'title';
   position: relative;
   display: inline-block;
 }

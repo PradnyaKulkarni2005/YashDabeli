@@ -6,7 +6,10 @@
   align-items: center;
   flex-direction: column;
 }
-
+@font-face {
+  font-family:title2 ;
+  src: url('../assets/fonts/titlefont.ttf') format('truetype');
+}
 .contact-content {
   max-width: 800px;
   width: 100%;
@@ -17,8 +20,9 @@
 .contact-title {
   font-size: 2.8rem;
   font-weight: bold;
-  color: #c0392b;
+  color: #650918;
   margin-bottom: 15px;
+  font-family: 'subtitle', sans-serif;
 }
 
 .contact-message {

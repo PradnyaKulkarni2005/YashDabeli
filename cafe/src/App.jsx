@@ -8,19 +8,43 @@ import Menu from './pages/Menu';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import AboutUs from './pages/AboutUs';
+import Silk from './Components/Silk';
 
 function App() {
   return (
-    <Router>
-      <CafeNavbar />
-      <Routes>
-        <Route path="/" element={<HeroSection />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+    <div style={{ position: 'relative', minHeight: '100vh', overflow: 'hidden' }}>
+      {/* Background */}
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: -1,
+        }}
+      >
+        <Silk
+          speed={5}
+          scale={1}
+          color="#f8d9de"
+          noiseIntensity={1.5}
+          rotation={0}
+        />
+      </div>
+
+      {/* Foreground App */}
+      <Router>
+        <CafeNavbar />
+        <Routes>
+          <Route path="/" element={<HeroSection />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

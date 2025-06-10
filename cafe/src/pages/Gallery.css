@@ -1,13 +1,14 @@
 .gallery-container {
   padding: 60px 5vw;
-  background: linear-gradient(to bottom right, #fff0e6, #ffe4ec);
+  /* background: linear-gradient(to bottom right, #fff0e6, #ffe4ec); */
   text-align: center;
 }
 
 .gallery-heading {
   font-size: 3rem;
-  color: #b33939;
-  font-weight: 700;
+  color: #5f1818;
+  font-family: 'subtitle';
+  font-weight: bold;
   margin-bottom: 10px;
   animation: fadeIn 1s ease-in-out;
 }
@@ -27,10 +28,11 @@
 
 .video-heading {
   font-size: 2.2rem;
-  color: #9b113c;
+  color: #6d122f;
   margin-bottom: 25px;
   animation: slideUp 1s ease;
   font-weight: bold;
+  font-family: 'subtitle';
 }
 
 .video-section {
