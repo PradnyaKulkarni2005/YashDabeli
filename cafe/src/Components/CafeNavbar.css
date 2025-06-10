@@ -85,9 +85,17 @@ body {
 
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
   .nav-links {
     position: absolute;
-    top: 70px;
+    top: 100px; /* Match navbar height */
     right: 0;
     flex-direction: column;
     background: var(--bg-color);
@@ -98,6 +106,7 @@ body {
     transform: translateY(-100%);
     opacity: 0;
     pointer-events: none;
+    transition: all 0.3s ease;
   }
 
   .nav-links.open {
@@ -109,4 +118,6 @@ body {
   .hamburger {
     display: flex;
   }
+
+  
 }
