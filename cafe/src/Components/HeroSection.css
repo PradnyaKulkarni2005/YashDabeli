@@ -4,6 +4,7 @@
   font-weight: bold;
   font-size: 50px;
 }
+
 .hero-container {
   display: flex;
   justify-content: center;
@@ -68,4 +69,7 @@
     opacity: 1;
     transform: translateX(0);
   }
+}
+.footer{
+  background-color: rgb(63, 24, 31);
 }

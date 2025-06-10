@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './HeroSection.css';
 import Slider from './Slider';
 import WhyChooseUs from '../pages/WhyChooseUs';
-
+import Contact from '../pages/Contact';
 
 export default function HeroSection() {
   const [showSlider, setShowSlider] = useState(false);
@@ -29,8 +29,12 @@ export default function HeroSection() {
         )}
       </div>
 
-      {/* ✅ Now correctly placed below the hero container */}
+     
       <WhyChooseUs />
+      <div className="footer">
+        <Contact variant="hero" />
+      </div>
+
     </>
   );
 }
