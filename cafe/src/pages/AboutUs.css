@@ -5,7 +5,7 @@
 }
 
 .about-hero {
-  background: url('../assets/cafe-bg.jpg') center/cover no-repeat;
+  background: url('https://res.cloudinary.com/deu26betq/image/upload/v1749492374/pizza2_fynogs.jpg') center/cover no-repeat;
   height: 60vh;
   position: relative;
   display: flex;
@@ -43,7 +43,8 @@
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #d35400;
+  color: #774936;
+  font-weight: bold;
 }
 
 .about-section p {
@@ -63,7 +64,7 @@
 
 .mv-box {
   background-color: #ffffff;
-  border-left: 6px solid #d35400;
+  border-left: 6px solid #5c2e34;
   border-radius: 10px;
   padding: 30px;
   max-width: 400px;
@@ -76,7 +77,7 @@
 }
 
 .mv-box h3 {
-  color: #b34000;
+  color: #4b230e;
   margin-bottom: 10px;
 }
 
@@ -116,7 +117,7 @@
 
 .founder-card h4 {
   margin-top: 15px;
-  color: #d35400;
+  color: #6d3a18;
 }
 
 .founder-card p {
