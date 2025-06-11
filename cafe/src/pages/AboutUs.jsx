@@ -1,7 +1,6 @@
 import React from "react";
 import "./AboutUs.css";
-import founder1 from "../assets/logo.png";
-import founder2 from "../assets/logo.png"; // Replace with actual founder images
+ // Replace with actual founder images
 
 export default function AboutUs() {
   return (
@@ -49,12 +48,12 @@ export default function AboutUs() {
         <h2 className="section-title">Meet the Founders</h2>
         <div className="founder-cards">
           <div className="founder-card">
-            <img src={founder1} alt="Mandar Pujari" />
+            <img src="https://res.cloudinary.com/deu26betq/image/upload/v1749637787/mama_iptjbs.jpg" alt="Mandar Pujari" />
             <h4>Mandar Pujari</h4>
             <p>Creative mind behind the café menu and customer service expert.</p>
           </div>
           <div className="founder-card">
-            <img src={founder2} alt="Shruti Pujari" />
+            <img src="https://res.cloudinary.com/deu26betq/image/upload/v1749637518/mami_vcehty.jpg" alt="Shruti Pujari" />
             <h4>Shruti Pujari</h4>
             <p>Ensures a pleasant environment and efficient workflow.</p>
           </div>
