@@ -20,6 +20,7 @@ export default function Slider() {
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
       </div>
 
       {/* Slides */}
@@ -43,11 +44,18 @@ export default function Slider() {
         </div>
 
         <div className="carousel-item position-relative">
-          <img src="https://res.cloudinary.com/deu26betq/image/upload/v1749195404/burger2_grbqla.jpg" className="d-block w-100 blurred-background" alt="Slide 3" />
+          <img src="https://res.cloudinary.com/deu26betq/image/upload/v1749492358/oreoshake_krxivj.jpg" className="d-block w-100 blurred-background" alt="Slide 3" />
           <div className="carousel-caption custom-caption">
             {/* <h2 className="bg-dark bg-opacity-75 text-white px-4 py-3 rounded">Juicy Burger</h2> */}
           </div>
+          
         </div>
+        <div className="carousel-item position-relative">
+          <img src="https://res.cloudinary.com/deu26betq/image/upload/v1749492322/coldcoffee_yn3v8g.jpg" className="d-block w-100 blurred-background" alt="Slide 4" />
+          <div className="carousel-caption custom-caption">
+            {/* <h2 className="bg-dark bg-opacity-75 text-white px-4 py-3 rounded">Juicy Burger</h2> */}
+          </div>
+          </div>
       </div>
 
       {/* Controls */}
