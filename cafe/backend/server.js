@@ -10,6 +10,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+
 // Connect to MongoDB
 mongoose.connect(process.env.CONNECTION_STRING, {
   useNewUrlParser: true,
@@ -25,19 +26,22 @@ app.post('/api/order', async (req, res) => {
   try {
     const { name, phone, items, total } = req.body;
     const newOrder = new Order({ name, phone, items, total });
+    console.log(`New order received: ${JSON.stringify(newOrder)}`);
     await newOrder.save();
 
     // Format items as string
-const itemList = items.map(i => `${i.item} x${i.quantity}`).join(', ');
+    const itemList = items.map(i => `${i.name} x${i.quantity}`).join(', ');
 
-const message = `📦 New Order from ${name}\n📱 Phone: ${phone}\n🧾 Items: ${itemList}\n💰 Total: ₹${total}`;
+    const message = `📦 New Order from ${name}\n📱 Phone: ${phone}\n🧾 Items: ${itemList}\n💰 Total: ₹${total}`;
 
     // Sending the message to the owner using Twilio
-    await client.messages.create({
+    const result = await client.messages.create({
       from: process.env.TWILIO_WHATSAPP_NUMBER,
       to: process.env.OWNER_WHATSAPP_NUMBER,
       body: message
     });
+    console.log("WhatsApp message SID:", result.sid);
+    console.log("Twilio message result:", result); 
 
     res.status(201).json({ message: 'Order placed & notification sent' });
   } catch (err) {
