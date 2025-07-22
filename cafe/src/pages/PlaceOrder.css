@@ -1,0 +1,69 @@
+.order-container {
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 15px;
+}
+
+.menu-card {
+  background: #f0f0f0;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+.menu-card:hover {
+  background: #ffe5b4;
+  transform: scale(1.05);
+}
+
+.order-form-box {
+  background: #fff9f0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.order-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.total-display {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.order-form button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  background: #ff8c00;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.back-button {
+  background: #999;
+}
+
+.order-form button:hover {
+  opacity: 0.9;
+}
