@@ -9,6 +9,7 @@ import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import AboutUs from './pages/AboutUs';
 import Silk from './Components/Silk';
+import PlaceOrder from './pages/PlaceOrder'; 
 
 function App() {
   return (
@@ -42,6 +43,8 @@ function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/place-order" element={<PlaceOrder />} />
+
         </Routes>
       </Router>
     </div>
