@@ -9,7 +9,9 @@ import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import AboutUs from './pages/AboutUs';
 import Silk from './Components/Silk';
-import PlaceOrder from './pages/PlaceOrder'; 
+import PlaceOrder from './pages/PlaceOrder';
+import './pages/Reviews.css'; 
+import Reviews from './pages/Reviews';
 
 function App() {
   return (
@@ -44,6 +46,8 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/place-order" element={<PlaceOrder />} />
+          <Route path="/reviews" element={<Reviews />} />
+
 
         </Routes>
       </Router>

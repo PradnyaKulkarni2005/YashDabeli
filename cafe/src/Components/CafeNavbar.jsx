@@ -23,6 +23,7 @@ const CafeNavbar = () => {
         <Link to="/place-order" onClick={handleLinkClick}>Place Order</Link>
         <Link to="/gallery" onClick={handleLinkClick}>Gallery</Link>
         <Link to="/contact" onClick={handleLinkClick}>Contact</Link>
+        <Link to="/reviews" onClick={handleLinkClick}>Reviews</Link>
       </div>
       <div
         className={`hamburger ${isOpen ? "open" : ""}`}
