@@ -6,7 +6,7 @@ export default function Reviews() {
   const [form, setForm] = useState({ name: '', rating: 0, comment: '' });
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/reviews')
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/reviews`)
       .then(res => res.json())
       .then(setReviews);
   }, []);
@@ -18,13 +18,13 @@ export default function Reviews() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (form.rating === 0) return alert("Please select a rating.");
-    await fetch('http://localhost:5000/api/reviews', {
+    await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/reviews`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form),
     });
     setForm({ name: '', rating: 0, comment: '' });
-    const updated = await fetch('http://localhost:5000/api/reviews').then(res => res.json());
+    const updated = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/reviews`).then(res => res.json());
     setReviews(updated);
   };
 
