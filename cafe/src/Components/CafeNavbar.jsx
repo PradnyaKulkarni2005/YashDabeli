@@ -20,8 +20,10 @@ const CafeNavbar = () => {
         <Link to="/" onClick={handleLinkClick}>Home</Link>
         <Link to="/about" onClick={handleLinkClick}>About Us</Link>
         <Link to="/menu" onClick={handleLinkClick}>Menu</Link>
+        <Link to="/place-order" onClick={handleLinkClick}>Place Order</Link>
         <Link to="/gallery" onClick={handleLinkClick}>Gallery</Link>
         <Link to="/contact" onClick={handleLinkClick}>Contact</Link>
+        <Link to="/reviews" onClick={handleLinkClick}>Reviews</Link>
       </div>
       <div
         className={`hamburger ${isOpen ? "open" : ""}`}
