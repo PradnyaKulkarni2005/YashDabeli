@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const Order = require('./models/Order');
+const Review = require('./models/Review');
 const twilio = require('twilio');
 
 dotenv.config();
@@ -49,6 +50,32 @@ app.post('/api/order', async (req, res) => {
     res.status(500).json({ error: 'Something went wrong' });
   }
 });
+
+
+// POST a new review
+app.post('/api/reviews', async (req, res) => {
+  try {
+    const { name, rating, comment } = req.body;
+    const review = new Review({ name, rating, comment });
+    await review.save();
+    res.status(201).json({ message: "Review submitted!" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
+// GET all reviews according to createdAt
+app.get('/api/reviews', async (req, res) => {
+  try {
+    const reviews = await Review.find().sort({ createdAt: -1 });
+    res.json(reviews);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
