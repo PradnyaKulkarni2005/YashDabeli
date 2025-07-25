@@ -153,8 +153,42 @@ button:hover {
   background-color: #666;
 }
 
+/* Add inside your existing @media (max-width: 600px) block */
 @media (max-width: 600px) {
+  .order-container {
+    margin-top: 130px;
+  }
   .menu-grid {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-template-columns: 1fr; /* 1 card per row */
+    gap: 16px;
+  }
+
+  .menu-card {
+    padding: 12px;
+    aspect-ratio: auto; /* Remove forced square ratio */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 14px;
+  }
+
+  .menu-card img {
+    width: 100%;
+    height: auto;
+    max-height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .menu-card h4 {
+    font-size: 1rem;
+    margin: 4px 0;
+  }
+
+  .menu-card p {
+    font-size: 0.95rem;
+    color: #444;
   }
 }

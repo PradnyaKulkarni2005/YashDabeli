@@ -4,20 +4,28 @@ import Slider from './Slider';
 import WhyChooseUs from '../pages/WhyChooseUs';
 import Contact from '../pages/Contact';
 import BlurText from './BlurText';
+import { useNavigate } from 'react-router-dom';
 
 export default function HeroSection() {
   const [showSlider, setShowSlider] = useState(false);
+  const [animationDone, setAnimationDone] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const sliderTimer = setTimeout(() => {
       setShowSlider(true);
     }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
 
-  const handleAnimationComplete = () => {
-    console.log('Animation completed!');
-  };
+    // Trigger animation done after slider comes in
+    const doneTimer = setTimeout(() => {
+      setAnimationDone(true);
+    }, 3000); // Slightly longer than slider delay
+
+    return () => {
+      clearTimeout(sliderTimer);
+      clearTimeout(doneTimer);
+    };
+  }, []);
 
   return (
     <>
@@ -28,7 +36,6 @@ export default function HeroSection() {
             delay={100}
             animateBy="words"
             direction="top"
-            onAnimationComplete={handleAnimationComplete}
             className="main-title"
           />
 
@@ -37,9 +44,17 @@ export default function HeroSection() {
             delay={300}
             animateBy="words"
             direction="top"
-            onAnimationComplete={handleAnimationComplete}
             className="subtitle"
           />
+
+          {/* Order Button appears only after animation is done */}
+          {animationDone && (
+            <div className="cta-buttons">
+              <button className="order-btn" onClick={() => navigate('/place-order')}>
+                🍽️ Order Now
+              </button>
+            </div>
+          )}
         </div>
 
         {showSlider && (
@@ -48,9 +63,21 @@ export default function HeroSection() {
           </div>
         )}
       </div>
-      <div className='choose'>
-      <WhyChooseUs />
+
+      <div className="choose">
+        <WhyChooseUs />
       </div>
+
+      {/* Review Button appears only after animation is done */}
+      {animationDone && (
+        <div className="review-cta">
+          <h3>⭐ Loved by Customers</h3>
+          <p>See what our happy foodies say about us!</p>
+          <button className="review-btn" onClick={() => navigate('/reviews')}>
+            🗣️ Read Reviews
+          </button>
+        </div>
+      )}
 
       <div className="footer">
         <Contact variant="hero" />
