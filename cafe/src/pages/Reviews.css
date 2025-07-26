@@ -123,6 +123,26 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+.add-review-button-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.add-review-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: #642432;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-review-btn:hover {
+  background-color: #4e121c;
+}
+
 /* ✅ Responsive Design */
 @media (max-width: 600px) {
   .review-section {
@@ -151,5 +171,16 @@
   .review-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .add-review-button-container {
+    margin-top: 1.5rem;
+    padding: 0 10px;
+  }
+
+  .add-review-btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border-radius: 10px;
   }
 }
