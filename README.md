@@ -1,4 +1,4 @@
-# 🥪 Yash Dabeli - Online Cafe Ordering Website
+# Yash Dabeli - Online Cafe Ordering Website
 
 Welcome to **Yash Dabeli**, a simple and elegant online ordering platform for your café or fast food business. Customers can browse the menu, place orders, and leave reviews, while the admin gets notified instantly via WhatsApp using Twilio integration.
 
