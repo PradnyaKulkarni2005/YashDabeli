@@ -4,7 +4,7 @@ Welcome to **Yash Dabeli**, a simple and elegant online ordering platform for yo
 
 ---
 
-## 🔗 Live Demo
+##  Live Demo
 
 - **Vercel**: ([https://yash-dabeli.vercel.app)](https://yash-dabeli.vercel.app)
 
